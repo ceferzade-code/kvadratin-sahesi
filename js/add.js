@@ -6,14 +6,13 @@ let cx = Number(prompt("cx?"));
 let cy = Number(prompt("cy?"));
 console.log(typeof x1);
 
-if (x2 - x1 < 0) {
+if (x2 - x1 < 0 && y2 - y1 > 0) {
   let x = alert(`sahesi: ${(x2 - x1) * -1 * (y2 - y1)} `);
-} else if (y2 - y1 < 0) {
+} else if (y2 - y1 < 0 && x2 - x1 > 0) {
   let y = alert(`sahesi: ${(x2 - x1) * ((y2 - y1) * -1)} `);
 } else {
-  let z = alert(`sahesi: ${(x2 - x1) * (y2 - y1)} ,
-    peremetri: ${(x2 - x1 + (y2 - y1)) * 2}`);
-};
+  let z = alert(`sahesi: ${(x2 - x1) * (y2 - y1)}`);
+}
 if (
   x2 - x1 > 0 &&
   y2 - y1 > 0 &&
@@ -37,6 +36,15 @@ if (
   y2 - y1 < 0 &&
   cx >= x1 &&
   cx <= x2 &&
+  cy <= y1 &&
+  cy >= y2
+) {
+  console.log(alert("yes"));
+} else if (
+  x2 - x1 < 0 &&
+  y2 - y1 < 0 &&
+  cx <= x1 &&
+  cx >= x2 &&
   cy <= y1 &&
   cy >= y2
 ) {
